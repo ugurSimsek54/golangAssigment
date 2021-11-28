@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "620feee5-9453-4186-b9d9-4feb5a260028",
+		"name": "getir",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FetchDataFromMongoDb",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startDate\": \"2017-01-02T01:22:14.398Z\",\r\n    \"endDate\":\"2017-03-28T01:22:14.398Z\",\r\n    \"minCount\":1,\r\n\t\"maxCount\":4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/records",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"records"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostDataToMongoDb",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"key\":\"ddd\",\r\n    \"createdAt\":\"2017-02-28T01:22:14.398Z\",\r\n    \"totalCount\":3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12345/record",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12345",
+					"path": [
+						"record"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InMemoryPostEndpoint",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"key\": \"active-tabs\",\r\n    \"value\": \"getir\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:12346/in-memory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12346",
+					"path": [
+						"in-memory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "InMemoryGetEndpoint",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:12346/in-memory?key=active-tabs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "12346",
+					"path": [
+						"in-memory"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "active-tabs"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

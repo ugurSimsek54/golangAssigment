@@ -1,0 +1,31 @@
+{
+  "name": "golangassigment",
+  "version": "1.0.0",
+  "description": "Golang MongoDb services",
+  "main": "src/index.js",
+  "engines": {
+    "node": "12.11.1"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ugurSimsek54/golangAssigment.git"
+  },
+  "keywords": [
+    "golang",
+    "assigment"
+  ],
+  "author": "Ugur Simsek <ugursimsek54@hotmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ugurSimsek54/golangAssigment/issues"
+  },
+  "homepage": "https://github.com/ugurSimsek54/golangAssigment#readme",
+  "dependencies": {
+    "express": "4.17.1",
+    "serve": "13.0.2"
+  }
+}
